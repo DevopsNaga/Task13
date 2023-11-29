@@ -1,0 +1,16 @@
+#Run the following commands in the same directory as your Dockerfile and docker-compose.yml:
+
+docker-compose build
+docker-compose up -d
+
+#Assuming you have a Docker Hub account, log in using the following command:
+
+docker login
+
+#Tag your custom image with your Docker Hub username and repository name:
+
+docker tag custom-nginx-image:latest your-docker-hub-username/custom-nginx-image:latest
+
+#Push the image to Docker Hub:
+
+docker push your-docker-hub-username/custom-nginx-image:latest
